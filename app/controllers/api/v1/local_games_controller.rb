@@ -33,4 +33,4 @@ class Api::V1::LocalGamesController < ApiController
     render json: { game_id: new_game.id }
   end
 
-end
+end 
