@@ -1,5 +1,5 @@
 class Api::V1::LocalGamesController < ApiController
-  protect_from_forgery unless: -> { request.format.json? }
+  skip_before_action :verify_authenticity_token
 
   def show
     render json: Game.find(params["id"]), serializer: LocalGameShowSerializer
