@@ -641,9 +641,9 @@ words.each do |codenames_word|
   Word.create!({word: codenames_word})
 end
 
-Game.create!
-Game.create!
-Game.create!
+Game.create!({codename: "test"})
+Game.create!({codename: "test"})
+Game.create!({codename: "test"})
 
 25.times do |i|
   Cell.create!({game_id: 1, word_id: (i + 1), color: colors[i], position: i, flipped_status: "down"})

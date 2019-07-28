@@ -1,5 +1,13 @@
 class LocalGameShowSerializer < ActiveModel::Serializer
-  attributes :cells, :red_score, :red_total, :blue_score, :blue_total, :assassin, :result
+  attributes :game_id, :codename, :cells, :red_score, :red_total, :blue_score, :blue_total, :assassin, :result
+
+  def game_id
+    object.id
+  end
+
+  def codename
+    object.codename
+  end
 
   def cells
     cells = []
