@@ -96,6 +96,7 @@ Rails.application.configure do
 
   config.action_cable.disable_request_forgery_protection = true
 
-  # Rails.application.config.action_cable.allowed_request_origins = ['http://192.168.1.246:8081', nil]
+  # Rails.application.config.action_cable.allowed_request_origins = ['http://192.168.1.246:8081']
+  Rails.application.config.action_cable.allowed_request_origins = [nil]
 
 end
