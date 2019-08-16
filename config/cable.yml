@@ -8,4 +8,7 @@ test:
 production:
   adapter: redis
   url: redis://redistogo:2954406e6093f86d54b10385bda47ce3@hammerjaw.redistogo.com:9971/
-  # channel_prefix: codenames-api_production
+  :host: hammerjaw.redistogo.com
+  :port: 9971
+  :password: 2954406e6093f86d54b10385bda47ce3
+  
