@@ -30,6 +30,6 @@ module CodenamesApi
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.api_only = true
-    config.web_console.whitelisted_ips = '10.0.0.35'
+    # config.web_console.whitelisted_ips = '10.0.0.35'
   end
 end
