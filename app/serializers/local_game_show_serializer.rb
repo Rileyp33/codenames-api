@@ -44,13 +44,7 @@ class LocalGameShowSerializer < ActiveModel::Serializer
   end
 
   def result
-    if red_score === red_total
-      "Red team wins!"
-    elsif blue_score === blue_total
-      "Blue team wins!"
-    elsif assassin === 1
-      "Assassin contacted. Game over."
-    end
+    object.result
   end
 
 end
