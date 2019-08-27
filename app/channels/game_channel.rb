@@ -30,14 +30,18 @@ class GameChannel < ApplicationCable::Channel
     red_total = game.cells.where(color: "red-agent").length
     blue_total = game.cells.where(color: "blue-agent").length
 
-    result = nil
-    if red_score === red_total
-      result = "Red team wins!"
-    elsif blue_score === blue_total
-      result = "Blue team wins!"
-    elsif assassin === 1
-      result = "Assassin contacted. Game over."
+    if red_score === red_total && game.result === nil
+      game.result = "Red team wins!"
+      game.save
+    elsif blue_score === blue_total && game.result === nil
+      game.result = "Blue team wins!"
+      game.save
+    elsif assassin === 1 && game.result === nil
+      game.result = "Assassin contacted. Game over."
+      game.save
     end
+
+    result = game.result
 
     game_data["cells"] = cells
     game_data["red_score"] = red_score
