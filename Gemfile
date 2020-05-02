@@ -50,3 +50,4 @@ gem 'database_cleaner', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'active_model_serializers'
+gem 'rack-cors'
