@@ -31,5 +31,13 @@ module CodenamesApi
     config.generators.system_tests = nil
     config.api_only = true
     # config.web_console.whitelisted_ips = '10.0.0.35'
+    
+    # CORS
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :options]
+      end
+    end
   end
 end
