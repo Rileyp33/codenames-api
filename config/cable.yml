@@ -7,8 +7,8 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:2954406e6093f86d54b10385bda47ce3@hammerjaw.redistogo.com:9971/
-  :host: hammerjaw.redistogo.com
-  :port: 9971
-  :password: 2954406e6093f86d54b10385bda47ce3
+  url: redis://:p9efab8d8f5d7b0758ef39ea5a00e04fb33152acef746b9c403233d45cd02e3cd@ec2-3-230-185-236.compute-1.amazonaws.com:7349/
+  :host: compute-1.amazonaws.com
+  :port: 7349
+  :password: 4f1b40e3de0cdfd723520aa861e857a039b80c5ace5fc94be089b2ee1dbff94219b51a24c6f0af9b3837e9d992509323638a2b9bbf318a89479f1b367a3630cb
   
